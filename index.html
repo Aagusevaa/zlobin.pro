@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="description" content="Zlobin Eugene">
+    <meta name="keywords" content="Zlobin, Eugene, sotfware, engineer, developer, javascript, js, ES2015, ES2016, nodejs, redux, react, backbone, angular, frontend, html, css, sass, git, jquery, lodash, underscore">
+    <meta name="author" content="Zlobin Eugene">
+
+    <title>Zlobin Eugene, Fullstack JavaScript and nodejs developer</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <style>
+      body {
+        background-color: #000;
+      }
+
+      .preloader {
+      	position: absolute;
+      	left: 50%;
+        margin-left: -100px;
+      	width: 200px;
+      	height: 200px;
+      	border-radius: 50%;
+      	perspective: 2700px;
+        top: 30%;
+      }
+
+      .preloader .inner {
+      	position: absolute;
+      	width: 100%;
+      	height: 100%;
+      	box-sizing: border-box;
+      	border-radius: 50%;
+      }
+
+      .preloader .inner.one {
+      	left: 0%;
+      	top: 0%;
+      	animation: one 1.15s linear infinite;
+      	border-bottom: 10px solid rgb(255, 255, 255);
+      }
+
+      .preloader .inner.two {
+      	right: 0%;
+      	top: 0%;
+      	animation: two 1.15s linear infinite;
+      	border-right: 10px solid rgb(255, 255, 255);
+      }
+
+      .preloader .inner.three {
+      	right: 0%;
+      	bottom: 0%;
+      	animation: three 1.15s linear infinite;
+      	border-top: 10px solid rgba(255, 0, 0, 0.64);
+      }
+
+      @keyframes one {
+      	0% {
+      		transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+      	}
+      	100% {
+      		transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+      	}
+      }
+
+      @keyframes two {
+      	0% {
+      		transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+      	}
+      	100% {
+      		transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+      	}
+      }
+
+      @keyframes three {
+      	0% {
+      		transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+      	}
+      	100% {
+      		transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+      	}
+      }
+
+      .main-svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+      }
+    </style>
+  <head>
+  <body>
+    <div class="cover centered" id="cover" style="display: none">
+      <main id="main">
+        <div class="profile">
+          <a href="/"><img src="/img/avatar.jpg" width="150" height="150"></a>
+          <h2>Zlobin Eugene</h2>
+          <hr>
+          <p>I'm a software engineer and passionate about the latest web technologies and building complex, modern, and performant web applications. I strive for continuous progress in everything I do, both personally and professionally.</p>
+          <hr class="hr-second">
+        </div>
+
+        <menu>
+          <span><a href="https://zlob.in/" target="_blank">Blog</a></span>
+          <span><a href="#/cv" id="link-cv">CV</a></span>
+          <span><a href="#/contact" id="link-contacts">Contacts</a></span>
+        </menu>
+
+        <div class="links">
+          <a class="link-first" href="https://github.com/Zlobin" rel="nofollow" target="_blank" title="GitHub">
+            <svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/ezlobin" rel="nofollow" target="_blank" title="LinkedIn">
+            <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>
+          </a>
+          <a href="https://twitter.com/Zlobin" rel="nofollow" target="_blank" title="Twitter">
+            <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+          </a>
+        </div>
+      </main>
+
+      <div class="cv hidden" id="cv">
+        <div class="wrapper">
+          <section class="personal">
+            <h1>
+              JavaScript, node.js developer
+              <span class="age"><span id="age">X</span> years old</span>
+            </h1>
+          </section>
+
+          <section class="specialization">
+            <h5>Stack:</h5>
+            <div id="tags" class="tags"></div>
+          </section>
+
+          <section class="education">
+            <h5>Education:</h5>
+            <div>
+              Bachelor of «Computing equipment and software» at <a href="http://ineu.edu.kz/" rel="nofollow" target="_blank">Innovative University Of Eurasia</a>, 2005 - 2009 (Pavlodar, Kazakhstan).
+
+              <div class="block">
+                <h5>Languages:</h5>
+                <ul>
+                  <li>Russian (native)</li>
+                  <li>English (can attend an interview)</li>
+                </ul>
+              </div>
+
+              <div class="block">
+                <h5>Conferences:</h5>
+                <ul>
+                  <li><a href="http://codefest.ru/" rel="nofollow" target="_blank">CodeFest</a>, 2014, Russia, Novosibirsk</li>
+                  <li><a href="http://www.highload.ru/" rel="nofollow" target="_blank">HighLoad++</a>, 2009, Russia, Moscow</li>
+                </ul>
+            </div>
+          </section>
+
+          <section class="experience">
+            <h5>
+              Experience (more than <span id="career-expirience">x</span> years):
+            </h5>
+
+            <div class="work">
+              <div class="company-box active">
+                <div class="holder">
+                  <span class="counter">3</span>
+                  <h5>Senior web-developer</h5>
+                  <p>Working as a remote contractor in an company that is an electronic publisher specializing in the Humanities and Social Sciences.</p>
+
+                  <div>
+                    Responsibilities and achievements:
+                  </div>
+                  <ul class="list">
+                    <li>
+                      Technical leader of the Universal Content Viewer application for viewing pdf, html and text type of content. PDF part was based on Mozilla's <a href="https://mozilla.github.io/pdf.js/" rel="nofollow" target="_blank">pdf.js</a> library.
+                    </li>
+                    <li>
+                      Was rewritten legacy vanilla-js app from the OpenLibrary (<a href="https://github.com/openlibrary/bookreader" rel="nofollow" target="_blank">BookReader</a>) to the Backbone stack.
+                    </li>
+                    <li>
+                      Implementation of the test-suite at the first time it was qUnit, after that (mocha, sinon, chai, phantomjs) for UCV project.
+                    </li>
+                    <li>
+                      Created an jQuery plugin (<a href="https://github.com/Zlobin/jBooklet" rel="nofollow" target="_blank">jBooklet</a>) for viewing pages in dual-page mode.
+                    </li>
+                    <li>
+                      Created an npm <a href="https://www.npmjs.com/package/gulp-tojst" rel="nofollow" target="_blank">gulp-plugin</a> to compile lodash\underscore templates into a single JST file.
+                    </li>
+                    <li>
+                      Implemented an Symfony API for working directly with MSSQL server. Was solved <a href="https://zlob.in/2013/03/podklyuchenie-iz-php-k-mssql/" rel="nofollow" target="_blank">an trouble</a> with connecting from PHP-library to MSSQL-server.
+                    </li>
+                    <li>
+                      Migration from grunt to gulp plugin, in that case was prepared an <a href="https://github.com/Zlobin/FrontEndStarterKit" rel="nofollow" target="_blank">FrontEnd Starter Kit</a>.
+                    </li>
+                  </ul>
+
+                  <div>
+                    <i>Used:</i> JavaScript, Backbone&amp;Marionette, Underscore, jQuery, JavaScriptMVC, eslint, QUnit, grunt, gulp, mocha, chai, sinon, HTML5, PHP, Symfony, Doctrine, Drupal 7.x, composer, Solr, mysql, MSSQL, REST API, TDD, JIRA, git, Ubuntu
+                  </div>
+                </div>
+
+                <aside>
+                  <span class="title"><a href="http://nitka.com/" rel="nofollow" target="_blank">Nitka Technologies, Inc.</a><br><i>NewYork, USA</i></span>
+
+                  <div class="table">
+                    <div class="cell">
+                      <div class="circle-box" id="job-nitka">X</div>
+                    </div>
+                    <div class="cell">
+                      <span class="text">years <br>at this job</span>
+                    </div>
+                  </div>
+
+                  <div class="time">
+                    07.2012 - till now
+                  </div>
+                </aside>
+              </div>
+
+              <div class="company-box">
+                <div class="holder">
+                  <span class="counter">2</span>
+                  <h5>Web-developer</h5>
+                  <p>Worked in an International Digital Agency as a remote web-developer for building and maintaining company's projects. Among the clients were such brands as: SAP, Procter&amp;Gamble, Pedigree, WesternUnion, Gillette, Olay, Tchibo, Chesterfield, AlfaBank etc.</p>
+
+                  <div>
+                    Responsibilities and achievements:
+                  </div>
+                  <ul class="list">
+                    <li>
+                      Was technical leader and main developer of the internal CRM, task-management system for keep tracking the whole of development process and distribution developer's free time.
+                    </li>
+                    <li>
+                      Creating brand-new internal CMS based on Yii-framework.
+                    </li>
+                    <li>
+                      Was implemented SAP's internal system for events management, reporting, viewing statistics of the events, etc.
+                    </li>
+                    <li>
+                      Creating a JS-library for uploading video directly to YouTube.
+                    </li>
+                    <li>
+                      Western Union Stimul - internal corporate website especially for partners, staff working with Western Union money transfer in Russia.
+                    </li>
+                    <li>
+                      Technical leader of the website (TaxCom) for the Russia's accountants.
+                    </li>
+                    <li>
+                      Was built an <a href="https://zlob.in/2013/01/utilita-bcp-dlya-eksportaimporta-v-mssql/" rel="nofollow" target="_blank">BSP-utility</a> for extreme fast exporting\importing from\to MSSQL DB.
+                    </li>
+                    <li>
+                      Creating the <a href="https://github.com/Zlobin/photo-module" rel="nofollow" target="_blank">JS-module</a> for working with photos: cropping, changing colors, saving results.
+                    </li>
+                    <li>
+                      Development apps, games through API of the social networks like FB, VK, OK.
+                    </li>
+                  </ul>
+
+                  <div>
+                    <i>Used:</i> PHP, CakePHP, Yii, C#, ASP.NET, JavaScript, CSS, HTML, jQuery, mysql, postresql, Redmine, svn, git
+                  </div>
+                </div>
+
+                <aside>
+                  <span class="title"><a href="http://convergent-usa.com/" rel="nofollow" target="_blank">Convergent Media Group</a><br><i>Moscow, Russia</i></span>
+
+                  <div class="table">
+                    <div class="cell">
+                      <div class="circle-box">2.8</div>
+                    </div>
+                    <div class="cell">
+                      <span class="text">years <br>at this job</span>
+                    </div>
+                  </div>
+
+                  <div class="time">
+                    06.2010 - 02.2013
+                  </div>
+                </aside>
+              </div>
+
+              <div class="company-box">
+                <div class="holder">
+                  <span class="counter">1</span>
+                  <h5>Web-developer</h5>
+                  <p>Web-studio for development small and medium websites for small business and government structures.</p>
+
+                  <div>
+                    Responsibilities and achievements:
+                  </div>
+                  <ul class="list">
+                    <li>
+                      Remote education system. Features: realtime progress, save state of testing even after failing internet-connection.
+                    </li>
+                    <li>
+                      Website for selling cars from worldwide auctions. Was made real-time chat, big count of parsers from ton of websites.
+                    </li>
+                    <li>
+                      Development a lot of corporate and government related sites - LAMP stack.
+                    </li>
+                  </ul>
+
+                  <div>
+                    <i>Used:</i> PHP, Kohana, JavaScript, CSS, HTML, jQuery, MySql, WordPress, Joomla
+                  </div>
+                </div>
+
+                <aside>
+                  <span class="title"><a href="http://finistcom.kz/" rel="nofollow" target="_blank">LLP «Finist Company»</a><br><i>Pavlodar, Kazakhstan</i></span>
+
+                  <div class="table">
+                    <div class="cell">
+                      <div class="circle-box">2.1</div>
+                    </div>
+                    <div class="cell">
+                      <span class="text">years <br>at this job</span>
+                    </div>
+                  </div>
+
+                  <div class="time">
+                    04.2008 - 05.2010
+                  </div>
+                </aside>
+              </div>
+            </div>
+
+            <div class="block">
+              Was in cooperation with:
+              <ul>
+                <li>
+                  <a href="http://lrwonline.com/" rel="nofollow" target="blank">«LRW online»</a>: Los Angeles, USA
+                  <a href="#" class="about-project" title="Show more info about it">more...</a>
+                  <div class="project-info">
+                    <h3>Finalization of the corporate website and blog development.</h3>
+                    <p>Period of development: 2014.</p>
+                    <p>Technologies: PHP, WordPress, KnockoutJS, CSS, HTML, TeamSite.</p>
+                  </div>
+                </li>
+                <li>
+                  Media holding <a href="http://newsmedia.ru/" rel="nofollow" target="_blank">«NewsMedia»</a>: Moscow, Russia
+                  <a href="#" class="about-project" title="Show more info about it">more...</a>
+                  <div class="project-info">
+                    <h3>Management of a team with 6 developers to complete social network for Russian Geographical Society in a short term.</h3>
+                    <p>Period of development: 2012.</p>
+                    <p>Technologies: PHP, JavaScript, CoffeeScript, CSS, HTML.</p>
+                  </div>
+                </li>
+                <li>
+                  «Kelly Street Digital»: Sydney, Australia
+                  <a href="#" class="about-project" title="Show more info about it">more...</a>
+                  <div class="project-info">
+                    <h3>Development parser for the custom language and further implementation it in the Drupal.</h3>
+                    <p>Period of development: 2011.</p>
+                    <p>Technologies: PHP, CSS, HTML, apache, mysql.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="other">
+            <h5>Key skills:</h5>
+            Result-oriented, initiative, dynamic, self-motivated with strong analytical and problem-solving skills. Stress resistance and having ability to work under pressure.
+          </section>
+        </div>
+      </div>
+
+      <div class="contacts hidden" id="contacts">
+        <h4>Get in touch!</h4>
+
+        <div>
+          <b>Skype:</b> <a href="skype:creastar-group?call">creastar-group</a>
+        </div>
+        <div>
+          <b>Email:</b> <a href="mailto:creastar@gmail.com">creastar@gmail.com</a>
+        </div>
+        <div>
+          <b>Phone:</b> <a href="callto://+7777934422">+7 (777) 93-44-222</a>
+        </div>
+
+        <img src="/img/qr.png" width="135" height="135">
+      </div>
+    </div>
+
+    <div class="preloader">
+      <div class="inner one"></div>
+      <div class="inner two"></div>
+      <div class="inner three"></div>
+    </div>
+
+    <svg class="main-svg"
+      width="0" height="0" version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <symbol id="icon-twitter" viewBox="0 0 16 16">
+          <title>twitter</title>
+          <path class="path1" d="M16 3.538c-0.588 0.263-1.222 0.438-1.884 0.516 0.678-0.406 1.197-1.050 1.444-1.816-0.634 0.375-1.338 0.65-2.084 0.797-0.6-0.638-1.453-1.034-2.397-1.034-1.813 0-3.281 1.469-3.281 3.281 0 0.256 0.028 0.506 0.084 0.747-2.728-0.138-5.147-1.444-6.766-3.431-0.281 0.484-0.444 1.050-0.444 1.65 0 1.138 0.578 2.144 1.459 2.731-0.538-0.016-1.044-0.166-1.488-0.409 0 0.013 0 0.028 0 0.041 0 1.591 1.131 2.919 2.634 3.219-0.275 0.075-0.566 0.116-0.866 0.116-0.212 0-0.416-0.022-0.619-0.059 0.419 1.303 1.631 2.253 3.066 2.281-1.125 0.881-2.538 1.406-4.078 1.406-0.266 0-0.525-0.016-0.784-0.047 1.456 0.934 3.181 1.475 5.034 1.475 6.037 0 9.341-5.003 9.341-9.341 0-0.144-0.003-0.284-0.009-0.425 0.641-0.459 1.197-1.038 1.637-1.697z"></path>
+        </symbol>
+        <symbol id="icon-github" viewBox="0 0 16 16">
+          <title>github</title>
+          <path class="path1" d="M8 0.198c-4.418 0-8 3.582-8 8 0 3.535 2.292 6.533 5.471 7.591 0.4 0.074 0.547-0.174 0.547-0.385 0-0.191-0.008-0.821-0.011-1.489-2.226 0.484-2.695-0.944-2.695-0.944-0.364-0.925-0.888-1.171-0.888-1.171-0.726-0.497 0.055-0.486 0.055-0.486 0.803 0.056 1.226 0.824 1.226 0.824 0.714 1.223 1.872 0.869 2.328 0.665 0.072-0.517 0.279-0.87 0.508-1.070-1.777-0.202-3.645-0.888-3.645-3.954 0-0.873 0.313-1.587 0.824-2.147-0.083-0.202-0.357-1.015 0.077-2.117 0 0 0.672-0.215 2.201 0.82 0.638-0.177 1.322-0.266 2.002-0.269 0.68 0.003 1.365 0.092 2.004 0.269 1.527-1.035 2.198-0.82 2.198-0.82 0.435 1.102 0.162 1.916 0.079 2.117 0.513 0.56 0.823 1.274 0.823 2.147 0 3.073-1.872 3.749-3.653 3.947 0.287 0.248 0.543 0.735 0.543 1.481 0 1.070-0.009 1.932-0.009 2.195 0 0.213 0.144 0.462 0.55 0.384 3.177-1.059 5.466-4.057 5.466-7.59 0-4.418-3.582-8-8-8z"></path>
+        </symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 16 16">
+          <title>linkedin</title>
+          <path class="path1" d="M14.5 0h-13c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h13c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5zM6 13h-2v-7h2v7zM5 5c-0.553 0-1-0.447-1-1s0.447-1 1-1c0.553 0 1 0.447 1 1s-0.447 1-1 1zM13 13h-2v-4c0-0.553-0.447-1-1-1s-1 0.447-1 1v4h-2v-7h2v1.241c0.412-0.566 1.044-1.241 1.75-1.241 1.244 0 2.25 1.119 2.25 2.5v4.5z"></path>
+        </symbol>
+      </defs>
+    </svg>
+
+    <script src="/dist/bundle.js"></script>
+  </body>
+</html>

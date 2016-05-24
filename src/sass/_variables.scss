@@ -1,0 +1,71 @@
+$support-for: (
+  ie: 9,
+  '*': -2,
+);
+
+// The font size set on the root html element.
+$base-font-size: 16px !default;
+
+// The base line height determines the basic unit of vertical rhythm.
+$base-line-height: 24px !default;
+
+// The length unit in which to output vertical rhythm values.
+// Supported values: px, em, rem.
+$base-unit: 'em' !default;
+
+// The default font family.
+$base-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+
+// The font sizes for h1-h6.
+$h1-font-size: 2    * $base-font-size !default;
+$h2-font-size: 1.5  * $base-font-size !default;
+$h3-font-size: 1.17 * $base-font-size !default;
+$h4-font-size: 1    * $base-font-size !default;
+$h5-font-size: 0.83 * $base-font-size !default;
+$h6-font-size: 0.67 * $base-font-size !default;
+
+// The amount lists and blockquotes are indented.
+$indent-amount: 40px !default;
+
+// Basic.
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #ccc;
+$color-transparent: transparent;
+$color-shadow: rgba(255, 255, 255, 0);
+$color-link-hover: #ea6153;
+$color-list-font: #666;
+
+// Tags.
+$color-tags-background: #eee;
+$color-tags-font: #999;
+$color-tags-hover: crimson;
+$color-tags-box-shadow: rgba(0, 0, 0, .25);
+
+// Profile.
+$color-profile-shadow: rgba(0, 0, 0, .5);
+$color-profile-menu-link: #ea6153;
+$color-profile-hr: rgba(255, 255, 255, .14);
+$color-profile-img-border: rgba(234, 97, 83, .1);
+$color-profile-menu-span-main: #f8f8f8;
+$color-profile-menu-span-hover: #ea6153;
+
+// Contacts.
+$color-contacts-border-left: #790202;
+$color-contacts-bolder: #f18b8b;
+
+// Career.
+$color-career-border-background: #eee;
+$color-career-time-font: #9ea3a3;
+$color-career-aside-background: #f9f9f9;
+$color-career-circle: #f18b8b;
+$color-career-title-font: #58444f;
+$color-career-title-border: #edecec;
+$color-career-holder-font: #333;
+$color-career-counter-background: #999;
+
+// CV.
+$color-cv-border: #790202;
+$color-cv-project-info-border: #eee;
+$color-cv-age: #9ea3a3;
+$color-cv-h5-font: #c3c3c3;

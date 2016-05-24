@@ -1,0 +1,15 @@
+@import 'base';
+
+.cover {
+  background: url(/img/cover/galaxy.jpg) center/cover no-repeat fixed;
+  display: flex;
+  height: 100%;
+  overflow-y: auto;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+  @import 'profile';
+  @import 'cv';
+  @import 'contacts';
+}

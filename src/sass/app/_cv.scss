@@ -1,0 +1,100 @@
+.cv {
+  background: $color-white;
+  border-left: 1px solid $color-cv-border;
+  font-size: 14px;
+  line-height: 21px;
+  max-height: 100%;
+  overflow: auto;
+  padding: 60px 45px;
+  width: 100%;
+
+  .wrapper {
+    max-width: 900px;
+
+    h1 {
+      margin-top: 0;
+    }
+
+    ul {
+      li {
+        color: $color-list-font;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+
+    .tags {
+      @import 'tags';
+      max-width: 800px;
+    }
+
+    section {
+      margin-bottom: 20px;
+
+      &.experience {
+        @import 'career';
+
+        .project-info {
+          border: 1px solid $color-cv-project-info-border;
+          display: none;
+          font-size: 12px;
+          margin-bottom: 15px;
+          margin-top: 5px;
+          max-width: 500px;
+          padding: 10px;
+
+          h3 {
+            line-height: 1.2;
+            margin: 0;
+          }
+
+          p {
+            margin: 0;
+          }
+        }
+
+        .about-project {
+          font-size: 10px;
+          position: relative;
+          top: -2px;
+        }
+      }
+
+      &.personal {
+        h1 {
+          display: inline-block;
+          position: relative;
+
+          .age {
+            color: $color-cv-age;
+            font-size: 14px;
+            font-weight: normal;
+            margin-top: 5px;
+            position: absolute;
+            right: 0;
+          }
+        }
+      }
+
+      &.education {
+        .block {
+          h5 {
+            font-size: 1em;
+            font-weight: normal;
+            margin-top: 10px;
+          }
+        }
+      }
+
+      h5, ul {
+        margin: 3px 0;
+      }
+
+      > h5 {
+        color: $color-cv-h5-font;
+        font-size: 1.3em;
+        margin: 10px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+main {
+  color: $color-profile-menu-span-main;
+  text-align: center;
+  text-shadow: 0 .05em 0 $color-profile-shadow;
+  margin: 0 auto;
+  margin-top: 12%;
+  max-width: 38.75rem;
+
+  &.floated {
+    float: left;
+    margin: 0;
+    margin-top: 60px;
+    width: 300px;
+
+    .profile {
+      > p {
+        display: none;
+      }
+
+      > h2 {
+        font-size: 1.5em;
+      }
+
+      .hr-second {
+        display: none;
+      }
+    }
+
+    menu {
+      margin: 25px auto;
+      padding: 0;
+      width: 125px;
+
+      > span {
+        display: block;
+        margin-bottom: 10px;
+
+        > a {
+          &.active {
+            color: $color-profile-menu-link;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .profile {
+    > hr {
+      border-top: 1px solid $color-profile-hr;
+      margin: 10px auto;
+      width: 70%;
+
+      &.hr-second {
+        width: 40%;
+      }
+    }
+
+    a {
+      border-bottom: 0;
+    }
+
+    img {
+      border: 2px solid $color-profile-img-border;
+      border-bottom: 0;
+      border-radius: 50%;
+      box-shadow: 0 0 1px 1px $color-profile-shadow;
+    }
+
+    > h2 {
+      font-size: 2rem;
+      margin: 0;
+      margin-top: 10px;
+    }
+
+    > p {
+      font-size: 1.1rem;
+      opacity: .9;
+      padding: 0 30px;
+    }
+  }
+
+  menu {
+    margin-left: -23px;
+    margin-top: 40px;
+
+    > span {
+      background-color: $color-profile-shadow;
+      border: 1px solid $color-profile-menu-span-main;
+      border-radius: 20px;
+      color: $color-profile-menu-span-main;
+      display: inline-block;
+      margin-bottom: 15px;
+      margin-right: 0.5em;
+      opacity: .8;
+      padding-top: 0.6125em;
+      padding-bottom: 0.55em;
+      width: 120px;
+      -webkit-appearance: none;
+
+      &:hover {
+        border-color: $color-profile-menu-span-hover;
+        transition: all .3s;
+
+        > a {
+          color: $color-profile-menu-span-hover;
+        }
+      }
+
+      > a {
+        border-bottom: 0;
+        color: $color-profile-menu-span-main;
+        opacity: .8;
+        padding: .625rem 1.25rem;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .links {
+    margin-top: 40px;
+
+    a {
+      border-bottom: 0;
+      display: inline-block;
+      margin-left: 30px;
+      text-decoration: none;
+
+      &.link-first {
+        margin-left: 10px;
+      }
+
+      .icon {
+    	  display: inline-block;
+        fill: $color-white;
+    	  height: 1.3em;
+        transition: all .3s;
+        width: 1.3em;
+
+        &:hover {
+          fill: $color-link-hover;
+        }
+      }
+    }
+  }
+}
