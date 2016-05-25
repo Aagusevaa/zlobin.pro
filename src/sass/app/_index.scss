@@ -9,7 +9,10 @@
   width: 100%;
   z-index: 1;
 
+  @import 'hamburger';
   @import 'profile';
   @import 'cv';
   @import 'contacts';
 }
+
+@import 'media-queries';

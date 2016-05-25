@@ -5,7 +5,14 @@
   max-height: 100%;
   overflow: auto;
   padding: 60px 45px;
+  position: relative;
+  transition: margin .3s;
   width: 100%;
+  z-index: 1;
+
+  &.left {
+    margin-left: 130px;
+  }
 
   div {
     margin-bottom: 7px;
