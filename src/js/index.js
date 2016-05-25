@@ -4,8 +4,8 @@ import { skills } from './skills';
 import '../sass/main.scss';
 
 const carreerFrom = 2008;
-const dateOfBirth = '03-02-1988';
-const lastJob = '07-16-2012';
+const dateOfBirth = '1988/03/02';
+const dateOfLastJob = '2012/07/16';
 const today = new Date();
 const byId = document.getElementById.bind(document);
 
@@ -15,11 +15,16 @@ const elCV = byId('cv');
 const elContacts = byId('contacts');
 const elLinkCV = byId('link-cv');
 const elLinkContacts = byId('link-contacts');
-const elCareerExpirience = byId('career-expirience');
+const elHamburgerLinkCV = byId('hamburger-link-cv');
+const elHamburgerLinkContacts = byId('hamburger-link-contacts');
+const elCareerExperience = byId('career-expirience');
 const elTags = byId('tags');
 const elAge = byId('age');
+const elQR = byId('qr');
 const elCurrentJob = byId('job-nitka');
 const elMoreInfoNodeList = document.querySelectorAll('.about-project');
+const elHamburger = byId('hamburger');
+const elNavigation = byId('navigation');
 
 function nodeEach(list, callback, scope) {
   for (let i = 0; i < list.length; i++) {
@@ -28,7 +33,10 @@ function nodeEach(list, callback, scope) {
 }
 
 function toggleMain(type) {
-  elMain.classList[type !== 'show' ? 'remove' : 'add']('floated');
+  const method = type !== 'show' ? 'remove' : 'add';
+
+  elMain.classList[method]('floated');
+  elCover.classList[method]('floated');
 }
 
 function dateDiff(date1, date2, interval) {
@@ -67,16 +75,12 @@ function dateDiff(date1, date2, interval) {
   }
 }
 
-function getAge(birthDate) {
-  return `${Math.floor(dateDiff(birthDate, today, 'months') / 12)}`;
-}
-
-function getJobPeriod(jobDate) {
-  return `${(dateDiff(jobDate, today, 'months') / 12).toFixed(1)}`;
-}
-
 function isHidden(el) {
   return el.offsetParent === null;
+}
+
+function isMobile() {
+  return window.orientation !== void 0;
 }
 
 function toggleContent(link, content, linkToHide, contentToHide, event) {
@@ -99,9 +103,13 @@ function toggleContent(link, content, linkToHide, contentToHide, event) {
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => (elCover.style.display = 'flex'), 1500);
 
-  elCareerExpirience.innerText = new Date().getFullYear() - carreerFrom;
-  elAge.innerText = getAge(dateOfBirth);
-  elCurrentJob.innerText = getJobPeriod(lastJob);
+  elCareerExperience.innerText = today.getFullYear() - carreerFrom;
+  elAge.innerText = Math.floor(dateDiff(dateOfBirth, today, 'months') / 12);
+  elCurrentJob.innerText = (dateDiff(dateOfLastJob, today, 'months') / 12).toFixed(1);
+
+  if (isMobile()) {
+    elQR.remove();
+  }
 
   Object
     .keys(skills)
@@ -117,13 +125,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Go to CV.
   elLinkCV.addEventListener('click', event =>
-     toggleContent(elLinkCV, elCV, elLinkContacts, elContacts, event)
+    toggleContent(elLinkCV, elCV, elLinkContacts, elContacts, event)
+  );
+  elHamburgerLinkCV.addEventListener('click', event =>
+    toggleContent(elLinkCV, elCV, elLinkContacts, elContacts, event)
   );
 
   // Go to Contacts.
   elLinkContacts.addEventListener('click', event =>
     toggleContent(elLinkContacts, elContacts, elLinkCV, elCV, event)
   );
+  elHamburgerLinkContacts.addEventListener('click', event =>
+    toggleContent(elLinkContacts, elContacts, elLinkCV, elCV, event)
+  );
+
+  elHamburger.addEventListener('click', event => {
+    event.preventDefault();
+
+    elHamburger.classList.toggle('is-active');
+    elNavigation.classList.toggle('hidden');
+    elCV.classList.toggle('left');
+    elContacts.classList.toggle('left');
+  });
 
   nodeEach(elMoreInfoNodeList, (index, el) =>
     el.addEventListener('click', event => {
