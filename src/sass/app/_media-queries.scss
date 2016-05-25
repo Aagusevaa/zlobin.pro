@@ -1,0 +1,107 @@
+@media screen and (max-width: 1000px) {
+  .cover {
+    .cv {
+      .wrapper {
+        h1 {
+          font-size: 1.7em;
+        }
+
+        section {
+          &.experience {
+            .work {
+              padding-left: 0;
+
+              .company-box {
+                display: flex;
+                flex-direction: column-reverse;
+
+                .holder {
+                  display: block;
+
+                  .counter {
+                    display: none;
+                  }
+                }
+
+                aside {
+                  border-bottom: 2px solid $color-career-border-background;
+                  border-left: 0;
+                  display: block;
+                  width: 100%;
+
+                  .table {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .contacts {
+      h4 {
+        font-size: 1.7em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cover {
+    main {
+      &.floated {
+        margin-top: 30px;
+      }
+    }
+
+    .cv {
+      padding: 30px 35px;
+    }
+
+    .contacts {
+      padding: 30px 35px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cover {
+    main {
+      &.floated {
+        display: none;
+      }
+    }
+
+    &.floated {
+      .hamburger-menu {
+        display: block;
+      }
+    }
+
+    .cv {
+      border-left: 0;
+      padding: 20px 25px;
+      padding-left: 50px;
+    }
+
+    .contacts {
+      border-left: 0;
+      padding: 20px 25px;
+      padding-left: 50px;
+
+      h4 {
+        margin-top: -3px;
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .cover {
+    main {
+      margin-top: 3%;
+    }
+  }
+}
