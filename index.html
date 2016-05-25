@@ -7,6 +7,7 @@
     <meta name="description" content="Zlobin Eugene">
     <meta name="keywords" content="Zlobin, Eugene, sotfware, engineer, developer, javascript, js, ES2015, ES2016, nodejs, redux, react, backbone, angular, frontend, html, css, sass, git, jquery, lodash, underscore">
     <meta name="author" content="Zlobin Eugene">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Zlobin Eugene, Fullstack JavaScript and nodejs developer</title>
 
@@ -93,6 +94,23 @@
   <head>
   <body>
     <div class="cover centered" id="cover" style="display: none">
+      <div id="hamburger-menu" class="hamburger-menu hidden">
+        <button class="hamburger hamburger--vortex" id="hamburger">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <nav id="navigation" class="hidden">
+          <ul>
+            <li><a href="/">Main page</a></li>
+            <li><a href="#/cv" id="hamburger-link-cv">CV</a></li>
+            <li><a href="#/contact" id="hamburger-link-contacts">Contacts</a></li>
+            <li><a href="https://zlob.in/" target="_blank">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+
       <main id="main">
         <div class="profile">
           <a href="/"><img src="/img/avatar.jpg" width="150" height="150"></a>
@@ -222,7 +240,7 @@
               <div class="company-box">
                 <div class="holder">
                   <span class="counter">2</span>
-                  <h5>Web-developer</h5>
+                  <h5>Middle web-developer</h5>
                   <p>Worked in an International Digital Agency as a remote web-developer for building and maintaining company's projects. Among the clients were such brands as: SAP, Procter&amp;Gamble, Pedigree, WesternUnion, Gillette, Olay, Tchibo, Chesterfield, AlfaBank etc.</p>
 
                   <div>
@@ -380,7 +398,7 @@
           <b>Phone:</b> <a href="callto://+7777934422">+7 (777) 93-44-222</a>
         </div>
 
-        <img src="/img/qr.png" width="135" height="135">
+        <img src="/img/qr.png" id="qr" width="135" height="135">
       </div>
     </div>
 
