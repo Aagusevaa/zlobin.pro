@@ -6,16 +6,11 @@ export const skills = {
     'CSS',
     'PHP'
   ],
-  db: [
-    'Mysql',
-    'MongoDB',
-    'Redis',
-    'PostreSQL'
-  ],
   frameworks_lib: [
     'React',
     'Redux',
-    'Backbone&Marionette',
+    'Backbone',
+    'Marionette',
     'Underscore',
     'jQuery',
     'Sass',
@@ -24,6 +19,12 @@ export const skills = {
     'Gulp',
     'Webpack',
     'Babel'
+  ],
+  db: [
+    'Mysql',
+    'MongoDB',
+    'Redis',
+    'PostgreSQL'
   ],
   other: [
     'Agile',
