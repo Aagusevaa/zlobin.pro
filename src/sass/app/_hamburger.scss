@@ -41,7 +41,7 @@
     &::before,
     &::after {
       background-color: $color-black;
-      border-radius: 4px;
+      border-radius: ($base-rhythm / 2);
       height: ($base-rhythm / 2);
       position: absolute;
       transition-duration: .2s;
@@ -57,11 +57,11 @@
     }
 
     &::before {
-      top: -8px;
+      top: -(set-rhythm());
     }
 
     &::after {
-      bottom: -8px;
+      bottom: -(set-rhythm());
     }
   }
 
