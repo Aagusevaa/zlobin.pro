@@ -9,47 +9,45 @@
   .hamburger {
     background-color: transparent;
     border: 0;
-    display: inline-block;
     color: inherit;
     cursor: pointer;
     margin: 0;
-    margin-top: set-rhythm(2);
     overflow: visible;
     outline: none;
-    padding: $hamburger-padding-y $hamburger-padding-x;
+    margin-left: set-rhythm();
+    padding: 0;
     text-transform: none;
-    transition-duration: $hamburger-hover-transition-duration;
+    transition-duration: .1s;
     transition-property: opacity, filter;
-    transition-timing-function: $hamburger-hover-transition-timing-function;
+    transition-timing-function: linear;
 
     &:hover {
-      opacity: $hamburger-hover-opacity;
+      opacity: .8;
     }
   }
 
   .hamburger-box {
-    display: inline-block;
-    height: #{$hamburger-layer-height} * 3 + #{$hamburger-layer-spacing} * 2;
+    height: set-rhythm(3);
     position: relative;
-    width: $hamburger-layer-width;
+    width: set-rhythm(3);
   }
 
   .hamburger-inner {
     display: block;
-    margin-top: $hamburger-layer-height / -2;
+    margin-top: set-rhythm();
     top: 40%;
 
     &,
     &::before,
     &::after {
-      background-color: $hamburger-layer-color;
-      border-radius: $hamburger-layer-border-radius;
-      height: $hamburger-layer-height;
+      background-color: $color-black;
+      border-radius: 4px;
+      height: ($base-rhythm / 2);
       position: absolute;
       transition-duration: .2s;
       transition-property: transform;
       transition-timing-function: ease;
-      width: $hamburger-layer-width;
+      width: set-rhythm(3);
     }
 
     &::before,
@@ -59,11 +57,11 @@
     }
 
     &::before {
-      top: (#{$hamburger-layer-spacing} + #{$hamburger-layer-height}) * -1;
+      top: -8px;
     }
 
     &::after {
-      bottom: (#{$hamburger-layer-spacing} + #{$hamburger-layer-height}) * -1;
+      bottom: -8px;
     }
   }
 
@@ -113,11 +111,12 @@
 
   nav {
     background: $color-white;
+    margin-left: set-rhythm(3);
     width: set-rhythm(18);
 
     ul {
       margin-left: set-rhythm(2);
-      margin-top: 0;
+      margin-top: -(set-rhythm());
       padding: 0;
 
       li {
