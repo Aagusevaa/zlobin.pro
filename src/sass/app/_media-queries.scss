@@ -4,6 +4,7 @@
       .wrapper {
         h1 {
           font-size: 18px;
+          margin-top: set-rhythm();
         }
 
         section {
@@ -24,13 +25,17 @@
                 }
 
                 aside {
-                  border-bottom: #{$base-rhythm / 4}px solid $color-career-border-background;
+                  border-bottom: ($base-rhythm / 4) solid $color-career-border-background;
                   border-left: 0;
                   display: block;
                   width: 100%;
 
                   .table {
                     display: none;
+                  }
+
+                  .time {
+                    margin-top: -($base-rhythm / 2);
                   }
                 }
               }
