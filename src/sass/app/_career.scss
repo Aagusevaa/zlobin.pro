@@ -93,10 +93,11 @@
         font: bold 20px/40px helvetica;
         margin: 0;
         opacity: .4;
-        padding: set-rhythm();
+        padding: ($base-rhythm / 2);
         position: absolute;
         right: 100%;
         text-align: center;
+        top: ($base-rhythm / 2);
         width: set-rhythm(4);
       }
 

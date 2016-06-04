@@ -27,7 +27,7 @@ main {
 
     menu {
       flex-direction: column;
-      margin: set-rhythm(3) auto;
+      margin: set-rhythm(2) auto;
       padding: 0;
       width: set-rhythm(15);
 
@@ -40,6 +40,19 @@ main {
             color: $color-profile-menu-link;
             font-weight: bold;
           }
+        }
+      }
+    }
+
+    .links {
+      margin: 0;
+
+      a {
+        padding: set-rhythm();
+
+        .icon {
+          height: set-rhythm(2);
+          width: set-rhythm(2);
         }
       }
     }
@@ -86,7 +99,7 @@ main {
     display: flex;
     justify-content: center;
     padding: 0;
-    margin: set-rhythm(4);
+    margin: set-rhythm(4) 0;
 
     > span {
       background-color: $color-profile-shadow;
@@ -129,9 +142,9 @@ main {
       text-decoration: none;
 
       .icon {
-    	  display: inline-block;
+        cursor: pointer;
         fill: $color-white;
-    	  height: set-rhythm(3);
+        height: set-rhythm(3);
         transition: all .2s;
         width: set-rhythm(3);
 

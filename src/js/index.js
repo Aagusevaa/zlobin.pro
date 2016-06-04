@@ -25,6 +25,7 @@ const elCurrentJob = byId('job-nitka');
 const elMoreInfoNodeList = document.querySelectorAll('.about-project');
 const elHamburger = byId('hamburger');
 const elNavigation = byId('navigation');
+const elPreloader = byId('preloader');
 
 function nodeEach(list, callback, scope) {
   for (let i = 0; i < list.length; i++) {
@@ -101,7 +102,11 @@ function toggleContent(link, content, linkToHide, contentToHide, event) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => (elCover.style.display = 'flex'), 1500);
+  setTimeout(() => {
+    elCover.style.display = 'flex';
+    elPreloader.remove();
+  }, 1500);
+
 
   elCareerExperience.innerText = today.getFullYear() - carreerFrom;
   elAge.innerText = Math.floor(dateDiff(dateOfBirth, today, 'months') / 12);

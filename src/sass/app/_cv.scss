@@ -2,7 +2,7 @@
   background: $color-white;
   border-left: 1px solid $color-cv-border;
   font-size: 14px;
-  line-height: set-rhythm(2);
+  line-height: 21px;
   max-height: 100%;
   overflow: auto;
   padding: set-rhythm(8) set-rhythm(7);
@@ -28,7 +28,7 @@
       li {
         color: $color-list-font;
         font-size: 14px;
-        line-height: set-rhythm(2);
+        line-height: 21px;
       }
     }
 
@@ -53,6 +53,7 @@
           padding: set-rhythm();
 
           h3 {
+            font-size: 14px;
             line-height: 1.2;
             margin: 0;
           }

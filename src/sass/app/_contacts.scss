@@ -24,11 +24,11 @@
 
   h4 {
     font-size: 24px;
-    margin: ($base-rhythm / 2) 0;
+    margin: set-rhythm() 0;
   }
 
   img {
     margin-left: -$base-rhythm;
-    margin-top: set-rhythm(2);
+    margin-top: set-rhythm();
   }
 }
