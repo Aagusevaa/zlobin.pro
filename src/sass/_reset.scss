@@ -13,14 +13,13 @@
   }
 }
 
+@function set-rhythm($value: 1) {
+  @return ($base-rhythm * $value);
+}
+
 @mixin normalize-font-size($value, $relative-to: $base-font-size) {
   @if unit($value) != 'px' {
     @error "normalize-font-size() only supports px inputs. The typey library is better.";
-  }
-  // px fallback for IE 8 and earlier. Note: IE 9/10 don't understand rem
-  // in font shorthand, but font-size longhand is fine.
-  @if $base-unit == rem and support-for(ie, 8) {
-    font-size: $value;
   }
   font-size: normalize-rhythm($value, $relative-to);
 }
@@ -46,9 +45,6 @@
     }
     $normalized-values: append($normalized-values, $value, $sep);
     $px-fallback: append($px-fallback, $px-value, $sep);
-  }
-  @if $base-unit == rem and support-for(ie, 8) {
-    #{$property}: $px-fallback;
   }
   #{$property}: $normalized-values;
 }
@@ -105,7 +101,6 @@ figcaption,
 figure,
 footer,
 header,
-hgroup,
 main,
 menu,
 nav,

@@ -4,18 +4,18 @@
   float: left;
   max-height: 100%;
   overflow: auto;
-  padding: 60px 45px;
+  padding: set-rhythm(8) set-rhythm(7);
   position: relative;
-  transition: margin .3s;
+  transition: margin .2s;
   width: 100%;
   z-index: 1;
 
   &.left {
-    margin-left: 130px;
+    margin-left: set-rhythm(16);
   }
 
   div {
-    margin-bottom: 7px;
+    margin-bottom: set-rhythm();
 
     b {
       color: $color-contacts-bolder;
@@ -23,13 +23,12 @@
   }
 
   h4 {
-    font-size: 2em;
-    margin: 0;
-    margin-bottom: 0.75em;
+    font-size: 24px;
+    margin: ($base-rhythm / 2) 0;
   }
 
   img {
-    margin-left: -5px;
-    margin-top: 20px;
+    margin-left: -$base-rhythm;
+    margin-top: set-rhythm(2);
   }
 }

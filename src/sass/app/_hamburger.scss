@@ -13,7 +13,7 @@
     color: inherit;
     cursor: pointer;
     margin: 0;
-    margin-top: 12px;
+    margin-top: set-rhythm(2);
     overflow: visible;
     outline: none;
     padding: $hamburger-padding-y $hamburger-padding-x;
@@ -29,7 +29,7 @@
 
   .hamburger-box {
     display: inline-block;
-    height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
+    height: #{$hamburger-layer-height} * 3 + #{$hamburger-layer-spacing} * 2;
     position: relative;
     width: $hamburger-layer-width;
   }
@@ -37,7 +37,7 @@
   .hamburger-inner {
     display: block;
     margin-top: $hamburger-layer-height / -2;
-    top: 50%;
+    top: 40%;
 
     &,
     &::before,
@@ -46,7 +46,7 @@
       border-radius: $hamburger-layer-border-radius;
       height: $hamburger-layer-height;
       position: absolute;
-      transition-duration: 0.15s;
+      transition-duration: .2s;
       transition-property: transform;
       transition-timing-function: ease;
       width: $hamburger-layer-width;
@@ -59,22 +59,22 @@
     }
 
     &::before {
-      top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+      top: (#{$hamburger-layer-spacing} + #{$hamburger-layer-height}) * -1;
     }
 
     &::after {
-      bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+      bottom: (#{$hamburger-layer-spacing} + #{$hamburger-layer-height}) * -1;
     }
   }
 
   .hamburger--vortex {
     .hamburger-inner {
-      transition-duration: 0.3s;
+      transition-duration: .2s;
       transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 
       &::before,
       &::after {
-        transition-delay: 0.1s;
+        transition-delay: .1s;
         transition-duration: 0s;
         transition-timing-function: linear;
       }
@@ -91,7 +91,7 @@
     &.is-active {
       .hamburger-inner {
         transform: rotate(765deg);
-        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+        transition-timing-function: cubic-bezier(.19, 1, .22, 1);
 
         &::before,
         &::after {
@@ -113,10 +113,10 @@
 
   nav {
     background: $color-white;
-    width: 150px;
+    width: set-rhythm(18);
 
     ul {
-      margin-left: 15px;
+      margin-left: set-rhythm(2);
       margin-top: 0;
       padding: 0;
 

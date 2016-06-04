@@ -3,6 +3,7 @@
 .cover {
   background: url(/img/cover/galaxy.jpg) center/cover no-repeat fixed;
   display: flex;
+  justify-content: center;
   height: 100%;
   overflow-y: auto;
   position: fixed;

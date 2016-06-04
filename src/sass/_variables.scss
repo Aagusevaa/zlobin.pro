@@ -3,6 +3,8 @@ $support-for: (
   '*': -2,
 );
 
+$base-rhythm: 8px;
+
 // The font size set on the root html element.
 $base-font-size: 16px !default;
 
@@ -11,21 +13,21 @@ $base-line-height: 24px !default;
 
 // The length unit in which to output vertical rhythm values.
 // Supported values: px, em, rem.
-$base-unit: 'em' !default;
+$base-unit: 'px' !default;
 
 // The default font family.
 $base-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 
 // The font sizes for h1-h6.
-$h1-font-size: 2    * $base-font-size !default;
-$h2-font-size: 1.5  * $base-font-size !default;
-$h3-font-size: 1.17 * $base-font-size !default;
-$h4-font-size: 1    * $base-font-size !default;
-$h5-font-size: 0.83 * $base-font-size !default;
-$h6-font-size: 0.67 * $base-font-size !default;
+$h1-font-size: 2   * $base-font-size !default;
+$h2-font-size: 1.4 * $base-font-size !default;
+$h3-font-size: 1.2 * $base-font-size !default;
+$h4-font-size: 1   * $base-font-size !default;
+$h5-font-size: 0.8 * $base-font-size !default;
+$h6-font-size: 0.6 * $base-font-size !default;
 
 // The amount lists and blockquotes are indented.
-$indent-amount: 40px !default;
+$indent-amount: $base-rhythm * 5 !default;
 
 // Basic.
 $color-black: #000;
@@ -40,12 +42,12 @@ $color-list-font: #666;
 $color-tags-background: #eee;
 $color-tags-font: #999;
 $color-tags-hover: crimson;
-$color-tags-box-shadow: rgba(0, 0, 0, .25);
+$color-tags-box-shadow: rgba(0, 0, 0, .24);
 
 // Profile.
-$color-profile-shadow: rgba(0, 0, 0, .5);
+$color-profile-shadow: rgba(0, 0, 0, .4);
 $color-profile-menu-link: #ea6153;
-$color-profile-hr: rgba(255, 255, 255, .14);
+$color-profile-hr: rgba(255, 255, 255, .16);
 $color-profile-img-border: rgba(234, 97, 83, .1);
 $color-profile-menu-span-main: #f8f8f8;
 $color-profile-menu-span-hover: #ea6153;
@@ -71,13 +73,13 @@ $color-cv-age: #9ea3a3;
 $color-cv-h5-font: #c3c3c3;
 
 // Hamburger.
-$hamburger-padding-x: 12px !default;
-$hamburger-padding-y: 15px !default;
-$hamburger-layer-width: 25px !default;
-$hamburger-layer-height: 4px !default;
-$hamburger-layer-spacing: 3px !default;
+$hamburger-padding-x: set-rhythm() !default;
+$hamburger-padding-y: set-rhythm(2) !default;
+$hamburger-layer-width: set-rhythm(3) !default;
+$hamburger-layer-height: $base-rhythm / 2 !default;
+$hamburger-layer-spacing: $base-rhythm / 2 !default;
 $hamburger-layer-color: #000 !default;
-$hamburger-layer-border-radius: 4px !default;
-$hamburger-hover-opacity: 0.7 !default;
-$hamburger-hover-transition-duration: 0.15s !default;
+$hamburger-layer-border-radius: $base-rhythm / 2 !default;
+$hamburger-hover-opacity: .8 !default;
+$hamburger-hover-transition-duration: 0.1s !default;
 $hamburger-hover-transition-timing-function: linear !default;

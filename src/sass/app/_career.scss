@@ -1,28 +1,28 @@
 .work {
-  padding-left: 35px;
+  padding-left: set-rhythm(4);
 
   .company-box {
-    border: 2px solid $color-career-border-background;
+    border: ($base-rhythm / 4) solid $color-career-border-background;
     display: table;
-    margin: 0 0 10px;
+    margin: 0 0 set-rhythm();
     table-layout: fixed;
     width: 100%;
 
     aside {
       background: $color-career-aside-background;
-      border-left: 2px solid $color-career-border-background;
+      border-left: ($base-rhythm / 4) solid $color-career-border-background;
       display: table-cell;
-      padding: 12px 8px;
+      padding: #{$base-rhythm / 2} set-rhythm();
       vertical-align: top;
-      width: 195px;
+      width: set-rhythm(25);
 
       .title {
-        border-bottom: 2px solid $color-career-title-border;
+        border-bottom: ($base-rhythm / 4) solid $color-career-title-border;
         color: $color-career-title-font;
         display: block;
         font: 300 14px/18px Lato, arial, helvetica, sans-serif;
-        margin: 0 0 10px;
-        padding: 0 0 10px;
+        margin: 0 0 set-rhythm();
+        padding: 0 0 set-rhythm();
         text-align: center;
 
         i {
@@ -37,7 +37,7 @@
 
       .table {
         display: table;
-        margin: 0 0 10px;
+        margin: 0 0 set-rhythm();
         table-layout: fixed;
         text-transform: capitalize;
         width: 100%;
@@ -49,28 +49,28 @@
           .text {
             color: $color-career-time-font;
             display: block;
-            font: 700 13px/15px Lato, arial, helvetica, sans-serif;
+            font: 700 13px/14px Lato, arial, helvetica, sans-serif;
           }
 
           .circle-box {
-            border: 3px solid $color-career-circle;
-            border-radius: 50%;
+            border: ($base-rhythm / 4) solid $color-career-circle;
+            border-radius: 60%;
             color: $color-career-circle;
             display: inline-block;
             font: 300 28px/54px Lato, arial, helvetica, sans-serif;
-            height: 60px;
-            letter-spacing: -2px;
-            margin-left: 15px;
-            padding: 0 2px 0 0;
+            height: set-rhythm(7);
+            letter-spacing: -($base-rhythm / 4);
+            margin-left: set-rhythm(2);
+            padding: 0 ($base-rhythm / 4) 0 0;
             position: relative;
             text-align: center;
             vertical-align: middle;
-            width: 60px;
+            width: set-rhythm(7);
           }
         }
 
         &:first-child {
-          width: 69px;
+          width: set-rhythm(9);
         }
       }
     }
@@ -79,46 +79,43 @@
       color: $color-career-holder-font;
       display: table-cell;
       font-size: 14px;
-      line-height: 24px;
-      padding: 15px 10px 22px 20px;
+      line-height: set-rhythm(3);
+      padding: set-rhythm(2) set-rhythm() set-rhythm(3) set-rhythm(3);
       position: relative;
       vertical-align: top;
 
       .counter {
         background: $color-career-counter-background;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
+        border-top-left-radius: set-rhythm(3);
+        border-bottom-left-radius: set-rhythm(3);
         color: $color-white;
-        height: 50px;
+        height: set-rhythm(6);
         font: bold 20px/40px helvetica;
-        margin: 0 2px 0 0;
-        opacity: 0.5;
-        padding: 5px;
-        padding-left: 8px;
+        margin: 0;
+        opacity: .4;
+        padding: set-rhythm();
         position: absolute;
         right: 100%;
         text-align: center;
-        top: -2px;
-        width: 35px;
+        width: set-rhythm(4);
       }
 
       > h5 {
-        font-size: 1.4em;
-        margin: 0 0 15px;
-        margin-top: -5px;
+        font-size: 16px;
+        margin: 0 0 set-rhythm(2);
         position: relative;
       }
 
       > p {
-        margin: 0 0 15px;
+        margin: 0 0 set-rhythm(2);
       }
 
       .list {
         color: $color-list-font;
         font-size: 14px;
-        line-height: 21px;
-        margin-bottom: 15px;
-        margin-left: 20px;
+        line-height: set-rhythm(3);
+        margin-bottom: set-rhythm(2);
+        margin-left: set-rhythm(3);
         padding: 0;
       }
     }

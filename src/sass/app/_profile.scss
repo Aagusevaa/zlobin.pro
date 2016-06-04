@@ -1,16 +1,15 @@
 main {
   color: $color-profile-menu-span-main;
   text-align: center;
-  text-shadow: 0 .05em 0 $color-profile-shadow;
-  margin: 0 auto;
-  margin-top: 12%;
-  max-width: 38.75rem;
+  text-shadow: 0 .04em 0 $color-profile-shadow;
+  margin-top: 8%;
+  max-width: set-rhythm(75);
 
   &.floated {
     float: left;
     margin: 0;
-    margin-top: 60px;
-    width: 300px;
+    margin-top: set-rhythm(8);
+    width: set-rhythm(38);
 
     .profile {
       > p {
@@ -18,7 +17,7 @@ main {
       }
 
       > h2 {
-        font-size: 1.5em;
+        font-size: 1.4em;
       }
 
       .hr-second {
@@ -27,13 +26,14 @@ main {
     }
 
     menu {
-      margin: 25px auto;
+      flex-direction: column;
+      margin: set-rhythm(3) auto;
       padding: 0;
-      width: 125px;
+      width: set-rhythm(15);
 
       > span {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: set-rhythm();
 
         > a {
           &.active {
@@ -48,8 +48,8 @@ main {
   .profile {
     > hr {
       border-top: 1px solid $color-profile-hr;
-      margin: 10px auto;
-      width: 70%;
+      margin: set-rhythm() auto;
+      width: 80%;
 
       &.hr-second {
         width: 40%;
@@ -58,49 +58,49 @@ main {
 
     a {
       border-bottom: 0;
-    }
+      display: block;
+      height: set-rhythm(20);
+      margin: 0 auto;
+      width: set-rhythm(20);
 
-    img {
-      border: 2px solid $color-profile-img-border;
-      border-bottom: 0;
-      border-radius: 50%;
-      box-shadow: 0 0 1px 1px $color-profile-shadow;
+      img {
+        border: 2px solid $color-profile-img-border;
+        border-bottom: 0;
+        border-radius: 80%;
+        box-shadow: 0 0 1px 1px $color-profile-shadow;
+      }
     }
 
     > h2 {
-      font-size: 2rem;
-      margin: 0;
-      margin-top: 10px;
+      font-size: 32px;
+      margin: set-rhythm(2) 0;
     }
 
     > p {
-      font-size: 1.1rem;
-      opacity: .9;
-      padding: 0 30px;
+      opacity: .8;
+      padding: 0 set-rhythm(4);
     }
   }
 
   menu {
-    margin-left: -23px;
-    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: set-rhythm(4);
 
     > span {
       background-color: $color-profile-shadow;
-      border: 1px solid $color-profile-menu-span-main;
-      border-radius: 20px;
+      border-radius: set-rhythm(3);
       color: $color-profile-menu-span-main;
-      display: inline-block;
-      margin-bottom: 15px;
-      margin-right: 0.5em;
+      margin: 0 ($base-rhythm / 2);
       opacity: .8;
-      padding-top: 0.6125em;
-      padding-bottom: 0.55em;
-      width: 120px;
+      padding: set-rhythm() 0;
+      width: set-rhythm(15);
       -webkit-appearance: none;
 
       &:hover {
         border-color: $color-profile-menu-span-hover;
-        transition: all .3s;
+        transition: all .2s;
 
         > a {
           color: $color-profile-menu-span-hover;
@@ -110,32 +110,30 @@ main {
       > a {
         border-bottom: 0;
         color: $color-profile-menu-span-main;
+        cursor: pointer;
         opacity: .8;
-        padding: .625rem 1.25rem;
+        padding: 0 set-rhythm(2);
         text-decoration: none;
       }
     }
   }
 
   .links {
-    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    margin: set-rhythm(3) 0;
 
     a {
       border-bottom: 0;
-      display: inline-block;
-      margin-left: 30px;
+      padding: set-rhythm(2);
       text-decoration: none;
-
-      &.link-first {
-        margin-left: 10px;
-      }
 
       .icon {
     	  display: inline-block;
         fill: $color-white;
-    	  height: 1.3em;
-        transition: all .3s;
-        width: 1.3em;
+    	  height: set-rhythm(3);
+        transition: all .2s;
+        width: set-rhythm(3);
 
         &:hover {
           fill: $color-link-hover;
