@@ -77,6 +77,16 @@
       &.floated {
         display: none;
       }
+
+      menu {
+        span {
+          width: set-rhythm(12);
+        }
+      }
+
+      .links {
+        margin-top: set-rhythm(-2);
+      }
     }
 
     &.floated {
@@ -89,6 +99,12 @@
       border-left: 0;
       padding: set-rhythm(2) set-rhythm(3);
       padding-left: set-rhythm(6);
+
+      .wrapper {
+        h1 {
+          margin-top: 0;
+        }
+      }
     }
 
     .contacts {
@@ -97,7 +113,7 @@
       padding-left: set-rhythm(6);
 
       h4 {
-        margin-top: -($base-rhythm / 2);
+        margin-top: 0;
       }
     }
   }

@@ -10,7 +10,7 @@
       background: $color-career-aside-background;
       border-left: ($base-rhythm / 4) solid $color-career-border-background;
       display: table-cell;
-      padding: #{$base-rhythm / 2} set-rhythm();
+      padding: ($base-rhythm / 2) set-rhythm();
       vertical-align: top;
       width: set-rhythm(25);
 

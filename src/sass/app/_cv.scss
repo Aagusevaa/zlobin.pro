@@ -36,6 +36,8 @@
 
     .tags {
       @import 'tags';
+
+      margin-left: $base-rhythm / 2 * -1;
       max-width: set-rhythm(100);
     }
 

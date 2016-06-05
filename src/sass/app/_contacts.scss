@@ -28,7 +28,7 @@
   }
 
   img {
-    margin-left: -$base-rhythm;
+    margin-left: set-rhythm(-1);
     margin-top: set-rhythm();
   }
 }
