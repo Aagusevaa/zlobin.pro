@@ -18,7 +18,8 @@ export const skills = {
     'Sinon',
     'Gulp',
     'Webpack',
-    'Babel'
+    'Babel',
+    'Symfony'
   ],
   db: [
     'Mysql',
@@ -30,6 +31,7 @@ export const skills = {
     'Agile',
     'Ubuntu',
     'Git',
-    'TDD'
+    'TDD',
+    'SPA'
   ]
 };
