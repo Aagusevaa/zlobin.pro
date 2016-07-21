@@ -2,7 +2,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
-const sassLintPlugin = require('sasslint-webpack-plugin');
+// const sassLintPlugin = require('sasslint-webpack-plugin');
 
 const env = process.env.NODE_ENV || 'development';
 const isProduction = (env === 'production');

@@ -11,6 +11,8 @@ export const skills = {
     'Redux',
     'Backbone',
     'Marionette',
+    'Ionic',
+    'Angular 2',
     'Underscore',
     'jQuery',
     'Sass',
