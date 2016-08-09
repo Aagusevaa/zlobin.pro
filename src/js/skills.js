@@ -1,4 +1,4 @@
-export const skills = {
+export default {
   lang: [
     'JavaScript (ES2015)',
     'Node.js',

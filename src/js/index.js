@@ -1,5 +1,7 @@
+/* global window, document */
+
 import './vendor/ga.js';
-import { skills } from './skills';
+import skills from './skills';
 
 import '../sass/main.scss';
 
