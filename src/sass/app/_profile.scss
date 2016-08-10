@@ -76,11 +76,23 @@ main {
       margin: 0 auto;
       width: set-rhythm(20);
 
-      img {
+      span {
+        box-shadow: 0 0 1px 1px $color-profile-shadow;
         border: 2px solid $color-profile-img-border;
         border-bottom: 0;
         border-radius: 80%;
-        box-shadow: 0 0 1px 1px $color-profile-shadow;
+        display: block;
+        height: 100%;
+        padding: 2px;
+        width: 100%;
+
+        .effect {
+          div {
+            border-bottom: 0;
+            border-radius: 80%;
+            box-shadow: 0 0 1px 1px $color-profile-shadow;
+          }
+        }
       }
     }
 

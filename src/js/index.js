@@ -2,7 +2,7 @@
 
 import './vendor/ga.js';
 import skills from './skills';
-
+import animateImage from './effect';
 import '../sass/main.scss';
 
 const carreerFrom = 2008;
@@ -14,6 +14,7 @@ const byId = document.getElementById.bind(document);
 const elCover = byId('cover');
 const elMain = byId('main');
 const elCV = byId('cv');
+const elPhoto = byId('photo');
 const elContacts = byId('contacts');
 const elLinkCV = byId('link-cv');
 const elLinkContacts = byId('link-contacts');
@@ -109,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
     elPreloader.remove();
   }, 1500);
 
-
   elCareerExperience.innerText = today.getFullYear() - carreerFrom;
   elAge.innerText = Math.floor(dateDiff(dateOfBirth, today, 'months') / 12);
   elCurrentJob.innerText = (dateDiff(dateOfLastJob, today, 'months') / 12).toFixed(1);
@@ -154,6 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
     elCV.classList.toggle('left');
     elContacts.classList.toggle('left');
   });
+
+  animateImage(elPhoto);
 
   nodeEach(elMoreInfoNodeList, (index, el) =>
     el.addEventListener('click', event => {
