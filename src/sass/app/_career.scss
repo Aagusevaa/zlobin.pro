@@ -33,6 +33,13 @@
         text-align: center;
       }
 
+      .technologies {
+        color: $color-career-time-font;
+        font-size: 12px;
+        margin-top: set-rhythm();
+        text-align: justify;
+      }
+
       .table {
         display: table;
         margin: 0 0 set-rhythm();
