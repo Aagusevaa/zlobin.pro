@@ -20,3 +20,8 @@ a {
     color: $color-link-hover;
   }
 }
+
+::selection {
+  color: $color-white;
+  background-color: $color-main-red;
+}

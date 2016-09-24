@@ -1,4 +1,4 @@
-// http://tympanus.net/Development/ImageTiltEffect/
+// @link http://tympanus.net/Development/ImageTiltEffect/
 /* global window, document */
 
 const body = document.body;
@@ -17,18 +17,18 @@ const options = {
   }
 };
 
-const images = [];
 const wrapper = document.createElement('div');
+let images = [];
 let el;
 
 function mousePosition(event = window.event) {
   let x = 0;
   let y = 0;
 
-  if (event.pageX || event.pageY) 	{
+  if (event.pageX || event.pageY) {
     x = event.pageX;
     y = event.pageY;
-  } else if (event.clientX || event.clientY) 	{
+  } else if (event.clientX || event.clientY) {
     x = event.clientX + body.scrollLeft
       + element.scrollLeft;
     y = event.clientY + body.scrollTop
@@ -41,6 +41,12 @@ function mousePosition(event = window.event) {
 
 const applyDOM = () => {
   const background = document.createElement('div');
+
+  images = [];
+
+  if (wrapper.classList.contains('effect')) {
+    wrapper.innerHTML = '';
+  }
 
   wrapper.className = 'effect';
 
@@ -82,7 +88,6 @@ const initEvents = () => {
 
   wrapper
     .addEventListener('mousemove', event => {
-      // requestAnimationFrame(function() {
       let i = 0;
       const { x, y } = mousePosition(event);
       const docScrolls = {
@@ -117,10 +122,9 @@ const initEvents = () => {
         img.style.transform = transform;
         i++;
       });
-      // });
     });
 
-  // reset all when mouse leaves the main wrapper.
+  // Reset all when mouse leaves the main wrapper.
   wrapper
     .addEventListener('mouseleave', () =>
       setTimeout(() =>

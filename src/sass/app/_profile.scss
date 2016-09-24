@@ -69,6 +69,18 @@ main {
       }
     }
 
+    .lang {
+      margin-top: set-rhythm();
+
+      span {
+        cursor: pointer;
+
+        &:hover {
+          color: $color-link-hover;
+        }
+      }
+    }
+
     a {
       border-bottom: 0;
       display: block;

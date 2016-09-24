@@ -16,11 +16,11 @@ let plugins = [
   new webpack.optimize.DedupePlugin(),
   new webpack.NoErrorsPlugin()/* ,
   new sassLintPlugin({
-      quiet: false,
-      failOnWarning: true,
-      failOnError: false,
-      testing: true
-    }) */
+    quiet: false,
+    failOnWarning: true,
+    failOnError: false,
+    testing: true
+  }) */
 ];
 
 if (isProduction) {
@@ -45,7 +45,7 @@ module.exports = {
   resolve: {
     root: distPath
   },
-  plugins: plugins,
+  plugins,
   module: {
     preLoaders: [
       {
@@ -62,6 +62,9 @@ module.exports = {
       }, {
         test: /\.scss$/,
         loader: 'style!css!sass?sourceMap'
+      }, {
+        test: /\.html$/,
+        loader: 'html'
       }
     ]
   }
