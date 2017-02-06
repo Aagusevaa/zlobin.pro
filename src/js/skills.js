@@ -1,6 +1,7 @@
 export default {
   lang: [
     'JavaScript (ES2015)',
+    'TypeScript',
     'Node.js',
     'HTML5',
     'CSS',
