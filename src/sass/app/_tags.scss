@@ -1,14 +1,14 @@
 > span {
-  background:$color-tags-background;
+  background: $color-tags-background;
   border-radius: ($base-rhythm / 2) 0 0 ($base-rhythm / 2);
   color: $color-tags-font;
   display: inline-block;
   font-size: 12px;
   height: set-rhythm(3);
   line-height: set-rhythm(3);
+  margin: ($base-rhythm / 2);
   padding: 0 set-rhythm(3);
   position: relative;
-  margin: ($base-rhythm / 2);
   text-decoration: none;
   transition: color .2s;
 
@@ -16,12 +16,12 @@
     background-color: $color-tags-hover;
     color: $color-white;
 
-    &:after {
+    &::after {
       border-left-color: $color-tags-hover;
     }
   }
 
-  &:before {
+  &::before {
     background: $color-white;
     border-radius: set-rhythm();
     box-shadow: inset 0 1px $color-tags-box-shadow;
@@ -29,11 +29,11 @@
     height: set-rhythm();
     left: set-rhythm();
     position: absolute;
-    width: set-rhythm();
     top: set-rhythm();
+    width: set-rhythm();
   }
 
-  &:after {
+  &::after {
     background: $color-white;
     border-bottom: 12px solid transparent;
     border-left: 12px solid $color-tags-background;

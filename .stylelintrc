@@ -1,5 +1,5 @@
 files:
-  include: '**/*.s+(a|c)ss'
+  exclude: '/node_modules/'
 rules:
   # Consistency Rules
   extends-before-mixins: 1
@@ -12,7 +12,7 @@ rules:
   no-ids: 2
   leading-zero: 1
   name-format: 0
-  nesting-depth: 1
+  nesting-depth: 3
   placeholder-in-extend: 1
   property-sort-order: 1
   property-spelling: 0

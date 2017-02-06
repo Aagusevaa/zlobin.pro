@@ -91,12 +91,12 @@
 
       .counter {
         background: $color-career-counter-background;
-        border-top-left-radius: set-rhythm(3);
         border-bottom-left-radius: set-rhythm(3);
+        border-top-left-radius: set-rhythm(3);
         box-shadow: inset -8px 0 8px -8px $color-counter-shadow;
         color: $color-white;
-        height: set-rhythm(6);
         font: bold 20px/40px helvetica;
+        height: set-rhythm(6);
         margin: 0;
         opacity: .4;
         padding: ($base-rhythm / 2);
