@@ -1,8 +1,13 @@
 'use strict';
 
+// https://github.com/webpack-contrib/awesome-webpack#webpack-plugins
+// webpack or webpack -p
+
 const path = require('path');
 const webpack = require('webpack');
-// const sassLintPlugin = require('sasslint-webpack-plugin');
+
+const compressionPlugin = require('compression-webpack-plugin');
+const sassLintPlugin = require('sasslint-webpack-plugin');
 
 const env = process.env.NODE_ENV || 'development';
 const isProduction = (env === 'production');
@@ -12,27 +17,20 @@ const entryPoint = './src/js/';
 const outputName = 'bundle';
 
 let plugins = [
-  new webpack.optimize.OccurenceOrderPlugin(),
-  new webpack.optimize.DedupePlugin(),
-  new webpack.NoErrorsPlugin()/* ,
+  new compressionPlugin({
+    asset: '[path].gz[query]',
+    algorithm: 'gzip',
+    test: /\.js$/,
+    threshold: 10240,
+    minRatio: 0.8
+  }),
   new sassLintPlugin({
     quiet: false,
-    failOnWarning: true,
+    failOnWarning: false,
     failOnError: false,
-    testing: true
-  }) */
+    testing: false
+  })
 ];
-
-if (isProduction) {
-  plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        drop_console: true,
-        unsafe: true
-      }
-    })
-  );
-}
 
 module.exports = {
   devtool: isProduction ? 'cheap-source-map' : 'eval',
@@ -42,29 +40,28 @@ module.exports = {
     path: distPath,
     filename: `${outputName}.js`
   },
-  resolve: {
-    root: distPath
-  },
   plugins,
   module: {
-    preLoaders: [
-      {
-        test: /\.js$/,
-        include: srcPath,
-        loader: 'eslint-loader'
-      }
-    ],
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['babel'],
-        include: srcPath
+        loaders: [
+          'babel-loader',
+          'eslint-loader'
+        ],
+        include: srcPath,
+        exclude: /node_modules/
       }, {
         test: /\.scss$/,
-        loader: 'style!css!sass?sourceMap'
+        loaders: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+          'sasslint-loader'
+        ]
       }, {
         test: /\.html$/,
-        loader: 'html'
+        loader: 'html-loader'
       }
     ]
   }
