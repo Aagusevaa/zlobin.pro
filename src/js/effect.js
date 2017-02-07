@@ -38,7 +38,6 @@ function mousePosition(event = window.event) {
   return { x, y };
 }
 
-
 const applyDOM = () => {
   const background = document.createElement('div');
 

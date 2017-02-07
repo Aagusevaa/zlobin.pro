@@ -7,7 +7,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 const compressionPlugin = require('compression-webpack-plugin');
-const sassLintPlugin = require('sasslint-webpack-plugin');
+const styleLintPlugin = require('stylelint-webpack-plugin');
 
 const env = process.env.NODE_ENV || 'development';
 const isProduction = (env === 'production');
@@ -16,7 +16,7 @@ const distPath = path.join(__dirname, 'dist');
 const entryPoint = './src/js/';
 const outputName = 'bundle';
 
-let plugins = [
+const plugins = [
   new compressionPlugin({
     asset: '[path].gz[query]',
     algorithm: 'gzip',
@@ -24,12 +24,7 @@ let plugins = [
     threshold: 10240,
     minRatio: 0.8
   }),
-  new sassLintPlugin({
-    quiet: false,
-    failOnWarning: false,
-    failOnError: false,
-    testing: false
-  })
+  new styleLintPlugin()
 ];
 
 module.exports = {
@@ -45,19 +40,19 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
+        include: srcPath,
+        exclude: /node_modules/,
         loaders: [
           'babel-loader',
           'eslint-loader'
-        ],
-        include: srcPath,
-        exclude: /node_modules/
+        ]
       }, {
         test: /\.scss$/,
+        exclude: /node_modules/,
         loaders: [
           'style-loader',
           'css-loader',
-          'sass-loader',
-          'sasslint-loader'
+          'sass-loader'
         ]
       }, {
         test: /\.html$/,
