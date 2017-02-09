@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-standard",
+  "files": {
+    exclude: '/node_modules/'
+  },
+  "rules": {
+    "number-leading-zero": "never"
+  }
+}

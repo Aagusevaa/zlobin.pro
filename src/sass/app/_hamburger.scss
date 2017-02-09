@@ -12,9 +12,9 @@
     color: inherit;
     cursor: pointer;
     margin: 0;
-    overflow: visible;
-    outline: none;
     margin-left: set-rhythm();
+    outline: none;
+    overflow: visible;
     padding: 0;
     text-transform: none;
     transition-duration: .1s;
@@ -68,7 +68,7 @@
   .hamburger--vortex {
     .hamburger-inner {
       transition-duration: .2s;
-      transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+      transition-timing-function: cubic-bezier(.19, 1, .22, 1);
 
       &::before,
       &::after {

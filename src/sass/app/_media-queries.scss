@@ -87,6 +87,24 @@
       .links {
         margin-top: set-rhythm(-2);
       }
+
+      .profile-wrapper {
+        display: block;
+
+        > h2 {
+          margin: set-rhythm(2) 0;
+        }
+
+        a {
+          margin: 0 auto;
+        }
+
+        .lang {
+          margin-top: set-rhythm(1);
+          position: relative;
+          right: 0;
+        }
+      }
     }
 
     &.floated {

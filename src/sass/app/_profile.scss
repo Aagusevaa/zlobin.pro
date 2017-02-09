@@ -1,9 +1,9 @@
 main {
   color: $color-profile-menu-span-main;
-  text-align: center;
-  text-shadow: 0 .04em 0 $color-profile-shadow;
   margin-top: 8%;
   max-width: set-rhythm(75);
+  text-align: center;
+  text-shadow: 0 .04em 0 $color-profile-shadow;
 
   &.floated {
     float: left;
@@ -22,6 +22,24 @@ main {
 
       .hr-second {
         display: none;
+      }
+
+      .profile-wrapper {
+        display: block;
+
+        > h2 {
+          margin: set-rhythm(2) 0;
+        }
+
+        a {
+          margin: 0 auto;
+        }
+
+        .lang {
+          margin-top: set-rhythm(1);
+          position: relative;
+          right: 0;
+        }
       }
     }
 
@@ -59,6 +77,31 @@ main {
   }
 
   .profile {
+    .profile-wrapper {
+      display: flex;
+      position: relative;
+
+      > h2 {
+        font-size: 32px;
+        margin-left: set-rhythm(4);
+        margin-top: set-rhythm(7);
+      }
+
+      .lang {
+        position: absolute;
+        bottom: 0;
+        right: set-rhythm(12);
+
+        span {
+          cursor: pointer;
+
+          &:hover {
+            color: $color-link-hover;
+          }
+        }
+      }
+    }
+
     > hr {
       border-top: 1px solid $color-profile-hr;
       margin: set-rhythm() auto;
@@ -69,30 +112,19 @@ main {
       }
     }
 
-    .lang {
-      margin-top: set-rhythm();
-
-      span {
-        cursor: pointer;
-
-        &:hover {
-          color: $color-link-hover;
-        }
-      }
-    }
-
     a {
       border-bottom: 0;
       display: block;
       height: set-rhythm(20);
-      margin: 0 auto;
       width: set-rhythm(20);
+      margin-left: set-rhythm(10);
+      margin-bottom: set-rhythm(.5);
 
       span {
-        box-shadow: 0 0 1px 1px $color-profile-shadow;
         border: 2px solid $color-profile-img-border;
         border-bottom: 0;
         border-radius: 80%;
+        box-shadow: 0 0 1px 1px $color-profile-shadow;
         display: block;
         height: 100%;
         padding: 2px;
@@ -108,11 +140,6 @@ main {
       }
     }
 
-    > h2 {
-      font-size: 32px;
-      margin: set-rhythm(2) 0;
-    }
-
     > p {
       opacity: .8;
       padding: 0 set-rhythm(4);
@@ -122,10 +149,11 @@ main {
   menu {
     display: flex;
     justify-content: center;
-    padding: 0;
     margin: set-rhythm(4) 0;
+    padding: 0;
 
     > span {
+      -webkit-appearance: none;
       background-color: $color-profile-shadow;
       border-radius: set-rhythm(3);
       color: $color-profile-menu-span-main;
@@ -133,7 +161,6 @@ main {
       opacity: .8;
       padding: set-rhythm() 0;
       width: set-rhythm(15);
-      -webkit-appearance: none;
 
       &:hover {
         border-color: $color-profile-menu-span-hover;

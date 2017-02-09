@@ -20,6 +20,7 @@ import career from '../templates/career.html';
 import education from '../templates/education.html';
 import about from '../templates/about.html';
 import stack from '../templates/stack.html';
+import citizenship from '../templates/citizenship.html';
 
 const html = {
   menu,
@@ -37,7 +38,8 @@ const html = {
   career,
   education,
   about,
-  stack
+  stack,
+  citizenship
 };
 
 const i18n = new Locale();
@@ -62,7 +64,8 @@ export default function render(callback, locale = 'en', isLoaded = false) {
     'career',
     'education',
     'about',
-    'stack'
+    'stack',
+    'citizenship'
   ].forEach(item =>
     new Template()
       .compile(html[item], i18n.get(item))

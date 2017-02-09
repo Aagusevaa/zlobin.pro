@@ -98,7 +98,7 @@ export default {
   },
   personal: {
     title: 'Personal Skills',
-    skills: 'Result-oriented, initiative, dynamic, self-motivated with strong analytical and problem-solving skills. Stress resistance and having ability to work under pressure.'
+    skills: 'Result-oriented, initiative, dynamic, self-motivated with strong analytical and problem-solving skills. Ability to multi-task in a fast-paced environment. Stress resistance and having ability to work under pressure.'
   },
   career: {
     description: 'Career History (more than <span id="career-experience"></span> years of experience)'
@@ -120,5 +120,9 @@ export default {
   },
   stack: {
     title: 'Stack'
+  },
+  citizenship: {
+    title: 'Citizenship',
+    citizenship: 'Russia'
   }
 };

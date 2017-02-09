@@ -6,17 +6,17 @@
 
   &.gray {
     -webkit-filter: grayscale(100%) brightness(105%) contrast(120%);
+    -webkit-transition: filter .4s, -webkit-filter .5s;
     filter: grayscale(100%) brightness(105%) contrast(120%);
-    -webkit-transition: filter 0.4s, -webkit-filter 0.5s;
-    transition: filter 0.5s, -webkit-filter 0.5s;
+    transition: filter .5s, -webkit-filter .5s;
   }
 
   .background,
   .front {
+    backface-visibility: hidden;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    backface-visibility: hidden;
     height: 100%;
     width: 100%;
   }

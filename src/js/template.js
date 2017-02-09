@@ -13,6 +13,8 @@ export default class Template {
   }
 
   render(el) {
-    el.innerHTML = this.compiled;
+    if (el) {
+      el.innerHTML = this.compiled;
+    }
   }
 }

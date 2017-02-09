@@ -1,3 +1,4 @@
+/* stylelint-disable */
 @function normalize-rhythm($value, $relative-to: $base-font-size, $unit: $base-unit) {
   @if unit($value) != px {
     @error "The normalize vertical-rhythm module only supports px inputs. The typey library is better.";
@@ -532,3 +533,4 @@ textarea {
 optgroup {
   font-weight: bold;
 }
+/* stylelint-enable */
