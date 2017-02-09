@@ -23,6 +23,24 @@ main {
       .hr-second {
         display: none;
       }
+
+      .profile-wrapper {
+        display: block;
+
+        > h2 {
+          margin: set-rhythm(2) 0;
+        }
+
+        a {
+          margin: 0 auto;
+        }
+
+        .lang {
+          margin-top: set-rhythm(1);
+          position: relative;
+          right: 0;
+        }
+      }
     }
 
     menu {
@@ -59,6 +77,31 @@ main {
   }
 
   .profile {
+    .profile-wrapper {
+      display: flex;
+      position: relative;
+
+      > h2 {
+        font-size: 32px;
+        margin-left: set-rhythm(4);
+        margin-top: set-rhythm(7);
+      }
+
+      .lang {
+        position: absolute;
+        bottom: 0;
+        right: set-rhythm(12);
+
+        span {
+          cursor: pointer;
+
+          &:hover {
+            color: $color-link-hover;
+          }
+        }
+      }
+    }
+
     > hr {
       border-top: 1px solid $color-profile-hr;
       margin: set-rhythm() auto;
@@ -69,24 +112,13 @@ main {
       }
     }
 
-    .lang {
-      margin-top: set-rhythm();
-
-      span {
-        cursor: pointer;
-
-        &:hover {
-          color: $color-link-hover;
-        }
-      }
-    }
-
     a {
       border-bottom: 0;
       display: block;
       height: set-rhythm(20);
-      margin: 0 auto;
       width: set-rhythm(20);
+      margin-left: set-rhythm(10);
+      margin-bottom: set-rhythm(.5);
 
       span {
         border: 2px solid $color-profile-img-border;
@@ -106,11 +138,6 @@ main {
           }
         }
       }
-    }
-
-    > h2 {
-      font-size: 32px;
-      margin: set-rhythm(2) 0;
     }
 
     > p {
