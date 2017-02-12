@@ -16,10 +16,6 @@ main {
         display: none;
       }
 
-      > h2 {
-        font-size: 1.4em;
-      }
-
       .hr-second {
         display: none;
       }
@@ -29,6 +25,7 @@ main {
 
         > h2 {
           margin: set-rhythm(2) 0;
+          font-size: 1.4em;
         }
 
         a {
