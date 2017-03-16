@@ -32,9 +32,8 @@ export default {
   ],
   other: [
     'Agile',
-    'Ubuntu',
+    'Linux',
     'Git',
-    'TDD',
     'SPA'
   ]
 };
