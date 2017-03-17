@@ -5,7 +5,8 @@ export default {
     'Node.js',
     'HTML5',
     'CSS',
-    'PHP'
+    'PHP',
+    'Python'
   ],
   frameworks_lib: [
     'React',

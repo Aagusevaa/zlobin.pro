@@ -24,7 +24,8 @@ export default {
     esDatabinding: 'библиотека для дву-направленного связывания данных',
     esMiddleware: 'реализация middleware паттерна',
     gulpTojst: 'gulp плагин для компиляции lodash (underscore) шаблонов в единый JST файл',
-    frontEndStarterKit: 'лёгкий путь для старта нового фронт-энд проекта с gulp'
+    frontEndStarterKit: 'лёгкий путь для старта нового фронт-энд проекта с gulp',
+    wpUpdater: 'Автоматическое обновление Wordpress'
   },
   cmg: {
     title: 'Web-разработчик',

@@ -24,7 +24,8 @@ export default {
     esDatabinding: 'an two-way data binding JS library',
     esMiddleware: 'function for implementing into app intermediate processing treatment',
     gulpTojst: 'gulp plugin to compile lodash(underscore) templates into a single JST file',
-    frontEndStarterKit: 'is an easy way to start a new front-end project with gulp'
+    frontEndStarterKit: 'is an easy way to start a new front-end project with gulp',
+    wpUpdater: 'WordPress auto-updater'
   },
   cmg: {
     title: 'Middle web-developer',
